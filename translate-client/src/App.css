@@ -1,0 +1,32 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  margin-top:2em;
+  text-align: center;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.language {
+  margin-right: 1em;
+}
+.error {
+  color: red;
+}
+.button {
+  background-color: #8ec53f;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
