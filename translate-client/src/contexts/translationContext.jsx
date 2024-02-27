@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const TranslationContext = createContext();
 const TranslationProvider = ({ children }) => {
+  // State for translations
   const [translations, setTranslations] = useState(
     JSON.parse(localStorage.getItem('translations'))
   );
@@ -12,8 +13,8 @@ const TranslationProvider = ({ children }) => {
 
   const translate = async (text) => {
     setLoading(true);
+    setError(null);
     try {
-      setError(null);
       var { data } = await axios.get(
         `${process.env.REACT_APP_PIM_TRANSLATION_API_ENDPOINT}/Translation/Translate/${text}`
       );
@@ -35,6 +36,7 @@ const TranslationProvider = ({ children }) => {
       setLoading(false);
     }
   };
+  // Create a memoized context value
   const contextValue = useMemo(() => {
     return {
       translations,
