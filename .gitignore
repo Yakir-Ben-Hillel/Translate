@@ -1,4 +1,5 @@
 translate-client/node_modules
+translate-client/.vscode
 translate.API/.vs
 translate.API/obj
-
+translate.API/bin
