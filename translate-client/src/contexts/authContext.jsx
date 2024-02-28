@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
   const refreshToken = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_PIM_TRANSLATION_API_ENDPOINT}/Auth/HandShake`
+        `${process.env.REACT_APP_TRANSLATION_API_ENDPOINT}/Auth/HandShake`
       );
       setToken(response.data.data.token);
       localStorage.setItem(localStorageTokenKey, response.data.data.token);

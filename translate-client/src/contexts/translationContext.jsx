@@ -16,7 +16,7 @@ const TranslationProvider = ({ children }) => {
     setError(null);
     try {
       var { data } = await axios.get(
-        `${process.env.REACT_APP_PIM_TRANSLATION_API_ENDPOINT}/Translation/Translate/${text}`
+        `${process.env.REACT_APP_TRANSLATION_API_ENDPOINT}/Translation/Translate/${text}`
       );
       if (!data.success) {
         setError(data.message);
